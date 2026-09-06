@@ -52,6 +52,9 @@ def translate():
             timeout=30
         )
 
+response.raise_for_status()
+
+
         result = response.json()
 
         # Check API response
