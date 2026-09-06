@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Language Translator</title>
+
+    <!-- Connect HTML with our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">🌐</div>
+
+            <div>
+                <h1>AI Language Translator</h1>
+                <p>Translate text quickly and easily</p>
+            </div>
+        </header>
+
+
+        <!-- Translation Card -->
+        <main class="translator-card">
+
+            <!-- Input Section -->
+            <section class="translation-section">
+
+                <div class="section-title">
+                    <label for="inputText">Enter your text</label>
+                    <span id="characterCount">0 / 5000</span>
+                </div>
+
+                <textarea
+                    id="inputText"
+                    maxlength="5000"
+                    placeholder="Type or paste the text you want to translate..."
+                    rows="8">
+                </textarea>
+
+            </section>
+
+
+            <!-- Language Selection -->
+            <section class="language-section">
+
+                <!-- Source Language -->
+                <div class="language-box">
+
+                    <label for="sourceLanguage">
+                        From
+                    </label>
+
+                    <select id="sourceLanguage">
+
+                        <option value="auto">
+                            Detect Language
+                        </option>
+
+                        <option value="en" selected>
+                            English
+                        </option>
+
+                        <option value="te">
+                            Telugu
+                        </option>
+
+                        <option value="hi">
+                            Hindi
+                        </option>
+
+                        <option value="ta">
+                            Tamil
+                        </option>
+
+                        <option value="kn">
+                            Kannada
+                        </option>
+
+                        <option value="ml">
+                            Malayalam
+                        </option>
+
+                        <option value="es">
+                            Spanish
+                        </option>
+
+                        <option value="fr">
+                            French
+                        </option>
+
+                        <option value="de">
+                            German
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Swap Languages Button -->
+                <button
+                    type="button"
+                    id="swapButton"
+                    class="swap-button"
+                    title="Swap languages">
+
+                    ⇄
+
+                </button>
+
+
+                <!-- Target Language -->
+                <div class="language-box">
+
+                    <label for="targetLanguage">
+                        To
+                    </label>
+
+                    <select id="targetLanguage">
+
+                        <option value="te" selected>
+                            Telugu
+                        </option>
+
+                        <option value="en">
+                            English
+                        </option>
+
+                        <option value="hi">
+                            Hindi
+                        </option>
+
+                        <option value="ta">
+                            Tamil
+                        </option>
+
+                        <option value="kn">
+                            Kannada
+                        </option>
+
+                        <option value="ml">
+                            Malayalam
+                        </option>
+
+                        <option value="es">
+                            Spanish
+                        </option>
+
+                        <option value="fr">
+                            French
+                        </option>
+
+                        <option value="de">
+                            German
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- Translate Button -->
+            <button
+                type="button"
+                id="translateButton"
+                class="translate-button">
+
+                <span id="translateButtonText">
+                    🌐 Translate
+                </span>
+
+                <span
+                    id="loadingText"
+                    class="loading-text"
+                    style="display: none;">
+
+                    Translating...
+
+                </span>
+
+            </button>
+
+
+            <!-- Output Section -->
+            <section class="translation-section output-section">
+
+                <div class="section-title">
+
+                    <label for="outputText">
+                        Translation
+                    </label>
+
+                    <span id="translationStatus">
+                        Ready
+                    </span>
+
+                </div>
+
+
+                <!-- Translation Result -->
+                <div
+                    id="outputText"
+                    class="output-box">
+
+                    <span class="placeholder-text">
+                        Your translated text will appear here...
+                    </span>
+
+                </div>
+
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+
+                    <!-- Copy Button -->
+                    <button
+                        type="button"
+                        id="copyButton"
+                        class="action-button">
+
+                        📋 Copy
+
+                    </button>
+
+
+                    <!-- Speak Button -->
+                    <button
+                        type="button"
+                        id="speakButton"
+                        class="action-button">
+
+                        🔊 Speak
+
+                    </button>
+
+
+                    <!-- Clear Button -->
+                    <button
+                        type="button"
+                        id="clearButton"
+                        class="action-button">
+
+                        🗑️ Clear
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Error Message -->
+            <div
+                id="errorMessage"
+                class="error-message"
+                style="display: none;">
+
+                ⚠️
+                <span id="errorText">
+                    Something went wrong.
+                </span>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+        </footer>
+
+    </div>
+
+
+    <!-- Connect HTML with JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+/* =========================================
+   AI LANGUAGE TRANSLATOR - CSS
+   ========================================= */
+
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    text-align: center;
+    color: white;
+
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   TRANSLATOR CARD
+   ========================================= */
+
+.translator-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   SECTION TITLE
+   ========================================= */
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.section-title label {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+}
+
+#characterCount {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================================
+   TEXTAREA
+   ========================================= */
+
+textarea {
+    width: 100%;
+
+    min-height: 170px;
+
+    resize: vertical;
+
+    border: 2px solid #e0e0e0;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    font-size: 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #667eea;
+
+    box-shadow:
+        0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   LANGUAGE SECTION
+   ========================================= */
+
+.language-section {
+    display: flex;
+
+    align-items: end;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.language-box {
+    flex: 1;
+}
+
+.language-box label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #555;
+
+    margin-bottom: 8px;
+}
+
+.language-box select {
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    border: 2px solid #e0e0e0;
+
+    background: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.language-box select:focus {
+    border-color: #667eea;
+}
+
+
+/* =========================================
+   SWAP BUTTON
+   ========================================= */
+
+.swap-button {
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.swap-button:hover {
+    transform: rotate(180deg);
+
+    background: #5568d9;
+}
+
+
+/* =========================================
+   TRANSLATE BUTTON
+   ========================================= */
+
+.translate-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.translate-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.translate-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   OUTPUT SECTION
+   ========================================= */
+
+.output-section {
+    margin-top: 30px;
+}
+
+#translationStatus {
+    font-size: 13px;
+
+    color: #667eea;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   OUTPUT BOX
+   ========================================= */
+
+.output-box {
+    min-height: 170px;
+
+    border: 2px solid #e0e0e0;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    background: #fafafa;
+
+    word-wrap: break-word;
+
+    white-space: pre-wrap;
+}
+
+.placeholder-text {
+    color: #999;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+   ========================================= */
+
+.action-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.action-button {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #444;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    background: #f0f2ff;
+
+    border-color: #667eea;
+
+    color: #667eea;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+   ========================================= */
+
+.error-message {
+    margin-top: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    background: #fff0f0;
+
+    color: #d93025;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   LOADING TEXT
+   ========================================= */
+
+.loading-text {
+    display: inline-block;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    text-align: center;
+
+    color: white;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .translator-card {
+        padding: 20px;
+    }
+
+    .language-section {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .swap-button {
+        align-self: center;
+
+        transform: rotate(90deg);
+    }
+
+    .swap-button:hover {
+        transform: rotate(270deg);
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+}
